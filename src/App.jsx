@@ -97,9 +97,7 @@ const App = () => {
           }, 5000); // Clear notification after 5 seconds
         })
         .catch(error => {
-          setNotifications(
-            `Error occured adding new person`
-          )
+          setNotifications({ message: error.response.data.error, type: 'error' })
           setTimeout(() => {
             setNotifications(null)
           }, 5000)
