@@ -67,7 +67,7 @@ const App = () => {
           })
           .catch(error => {
             // Note: 'updatedPerson' is not accessible in this scope. You might need a different approach to handle the name
-            setNotifications({ message: `An error occurred. This user was already removed from the server.`, type: 'error' });
+            setNotifications({ message: error.response.data.error, type: 'error' });
             setTimeout(() => {
               setNotifications(null)
             }, 5000)
@@ -123,7 +123,7 @@ const App = () => {
         .catch(error => {
           console.error('Error deleting person:', error);
           // Handle the error appropriately
-          setNotifications({ message: `An error occured. This user was already removed from server.`, type: 'error' })
+          setNotifications({ message: error.response.data.error, type: 'error' })
           setTimeout(() => {
             setNotifications(null)
           }, 5000)
