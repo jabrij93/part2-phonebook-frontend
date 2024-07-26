@@ -74,7 +74,6 @@ const App = () => {
           }) 
       }
     }
-    
 
     const existingPerson = persons.some(person=>person.name === personObject.name)
 
