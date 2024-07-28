@@ -3,6 +3,7 @@ import Person from './Components/Person'
 import Notification from './Components/Notification'
 import FilterName from './Components/FilterName'
 import AddNewPerson from './Components/AddNewPerson'
+import Togglable from './Components/Togglable'
 import axios from 'axios'
 import personService from './services/personService'
 
@@ -136,9 +137,12 @@ const App = () => {
       <FilterName handleSearchName={handleSearchName}/>
       <Notification message={notifications?.message} type={notifications?.type}/>
 
+      <Togglable buttonLabel='Add new person'>
       <h2>Add a new</h2>
-      <AddNewPerson addName={addName} handleNameChange={handleNameChange} newName={newName} handleNumberChange={handleNumberChange} newNumber={newNumber}/>
-      
+        <AddNewPerson 
+        addName={addName} handleNameChange={handleNameChange} newName={newName} 
+        handleNumberChange={handleNumberChange} newNumber={newNumber}/>
+      </Togglable>
       <h2>Numbers</h2>
       <Person persons={persons} search={search} onDelete={handleDelete}/>
     </div>
