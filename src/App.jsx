@@ -137,12 +137,12 @@ const App = () => {
       <FilterName handleSearchName={handleSearchName}/>
       <Notification message={notifications?.message} type={notifications?.type}/>
 
-      <Togglable buttonLabel='Add new person'>
-      <h2>Add a new</h2>
+      <Togglable buttonLabel='Add new number'>
         <AddNewPerson 
         addName={addName} handleNameChange={handleNameChange} newName={newName} 
         handleNumberChange={handleNumberChange} newNumber={newNumber}/>
       </Togglable>
+      
       <h2>Numbers</h2>
       <Person persons={persons} search={search} onDelete={handleDelete}/>
     </div>
