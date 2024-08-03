@@ -143,8 +143,10 @@ const App = () => {
         handleNumberChange={handleNumberChange} newNumber={newNumber}/>
       </Togglable>
       
-      <h2>Numbers</h2>
-      <Person persons={persons} search={search} onDelete={handleDelete}/>
+      <h2>Numbers</h2> 
+      
+        <Person persons={persons} search={search} onDelete={handleDelete}/>
+    
     </div>
   )
 }
