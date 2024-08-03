@@ -144,9 +144,7 @@ const App = () => {
       </Togglable>
       
       <h2>Numbers</h2> 
-      
-        <Person persons={persons} search={search} onDelete={handleDelete}/>
-    
+      <Person persons={persons} search={search} onDelete={handleDelete}/>
     </div>
   )
 }

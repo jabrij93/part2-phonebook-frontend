@@ -13,19 +13,16 @@ const Person = ({ persons, search, onDelete }) => {
   
     return (
       <div>
-        <button style={{ display: 'inline-flex' }} onClick={toggleVisibility}> hide </button>
+        <button onClick={toggleVisibility}> hide </button>
         {persons.filter((person)=>{
           return search.toUpperCase() === '' ? person : person.name.toUpperCase().includes(search.toUpperCase())
         }).map(person => 
-          
-            <div className='phonebook' key={person.id} style={showWhenVisible} >
-                
+            <div className='phonebook' key={person.id} style={hideWhenVisible} >
                   <li>{person.name}</li>  
                   <li>{person.number}</li>
                   <li>
                     <button onClick={() => onDelete(person.id)}>Delete</button>
                   </li>
-                
             </div>
         )}
       </div>
